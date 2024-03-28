@@ -1,9 +1,12 @@
 function sendMail(contactForm) {
-    emailjs.send("gmail", "Kevin", {
+
+
+    emailjs.send("Gmail","Kevin", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
-        "project_request": contactForm.projectsummary.value
+        "message": contactForm.message.value,
     })
+
     .then(
         function(response) {
             console.log("SUCCESS", response);
